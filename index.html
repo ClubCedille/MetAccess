@@ -1,0 +1,65 @@
+<!doctype html>
+<html ng-app="MetAccess">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Cedille Dashboard</title>
+
+	<!-- mobile meta -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<meta name="msapplication-TileColor" content="#e7e7e7">
+
+	<!-- CSS -->
+	<!-- build:css css/style.min.css -->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+	<!-- endbuild -->
+	<script src="./js/angular.min.js"></script>
+	<script src="./js/jquery-1.12.3.min.js"></script>
+	<script src="./js/async.min.js"></script>
+	<script src="./js/script.js"></script>
+</head>
+<body ng-controller="AccessList">
+	<header>
+		<h1>{{title}}</h1>
+		<ul>
+			<li>Section 1</li>
+			<li>Section 2</li>
+			<li>Section 3</li>
+			<li>Section 4</li>
+			<li>Section 5</li>
+			<li>Section 6</li>
+		</ul>
+	</header>
+	<aside>
+		<ul>
+			<li>Section 1</li>
+			<li>Section 2</li>
+			<li>Section 3</li>
+			<li>Section 4</li>
+			<li>Section 5</li>
+			<li>Section 6</li>
+		</ul>
+	</aside>
+	<main>
+		<ul ng-repeat="club in clubs" id="{{club.id}}" name="{{club.name}}">
+			<li>
+				<input type="text" class="memberInput" placeholder="+ Nouveau Membre"
+					ng-enter="addMember(club.memberToAdd, club)"
+					ng-model="club.memberToAdd.name"/>
+			</li>
+			<li ng-repeat="member in club.members" id="{{member.id}}" name="{{member.name}}">
+				<label class="member-name">{{member.name}}</label>
+				<label class="member-code">{{member.code}}</label>
+				<label class="member-remove" ng-click="removeMember(member, club)"><i class="fa fa-close"></i></label>
+			</li>
+		</ul>
+	</main>
+	<footer>
+		
+	</footer>
+</body>
+</html>

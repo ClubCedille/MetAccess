@@ -1,0 +1,138 @@
+html, html *{
+	margin: 0; padding: 0; border: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font: 12pt "Open Sans";
+}
+
+html, body{
+	width: 100%; height: 100%;
+}
+
+ul{
+	list-style: none;
+}
+
+
+header{
+	background: #eee;
+	text-align: right;
+	overflow: hidden;
+	position: fixed; top: 0; left: 0; width: 100%;
+}
+
+header h1{
+	float: left;
+	text-shadow: rgba(0, 0, 0, 0.35) 0px 1px 2px;
+	margin-left: 1em;
+}
+
+header ul{
+	list-style: none;
+}
+
+header ul li{
+	display: inline-block;
+	padding: 1em;
+	background: #efefef;
+}
+
+
+aside{
+	float: left;
+	width: 10%;
+	border-right: 1px dashed #eee;
+	margin-right: -1px;
+	overflow: hidden;
+	background: #eee;
+}
+
+aside li{
+	padding: 0.5em 1em;
+	border-top: 1px dashed #ccc;
+}
+
+aside li:last-child{
+	border-bottom: 1px dashed #ccc;
+}
+
+aside, main{
+	margin-top: 3.35em;
+}
+
+main{
+	float: left;
+	width: 90%;
+	min-height: 80%;
+	padding-left: 1em;
+	border-left: 1px dashed #eee;
+	overflow: hidden;
+	background: silver;
+}
+
+main ul{
+	display:block; float: left; clear: none;
+	min-width: 360px;
+	background: #ddd;
+	border: 1px solid #eee;
+	border-radius: 3px;
+	margin: 2em 0.5em 0 0;
+}
+
+main ul:before{
+	content: attr(name);
+	display: block;
+	font-weight: 900;
+	font-size: 12pt;
+	background: #efefef;
+	padding: 1em 1em 0.5em;
+	text-shadow: rgba(0, 0, 0, 0.35) 0px 1px 2px;
+}
+
+main ul li{
+	padding: 0.3em 1em;
+}
+
+main ul li:first-child{
+	padding: 0;
+}
+
+main ul li input{
+	font: 12pt "Open Sans";
+	text-transform: capitalize;
+}
+
+main ul li:nth-child(2n){
+	background: #efefef;
+}
+
+main ul li:nth-child(2n+1){
+	background: #e7e7e7;
+}
+
+main ul li label.member-code{
+	color: rgba(0, 0, 0, 0.35);
+}
+
+main ul li label.member-remove{
+	float: right; color: silver;
+	cursor: pointer;
+}
+main ul li label.member-remove:hover {
+	float: right; color: red;
+	cursor: pointer;
+}
+
+
+main .memberInput{
+	width: 100%; padding: 8px 1em;
+}
+
+footer{
+	width: 100%;
+	border-top: 1px dashed #eee;
+	clear: both;
+	min-height: 3em;
+}
